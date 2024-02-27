@@ -22,4 +22,25 @@ storyWords = storyWords.map((word) => {
   return word;
 })
 
+let badWordIndex = storyWords.findIndex((word) => {
+  return word === badWord;
+})
+
+console.log(storyWords[badWordIndex]);
+
+storyWords[badWordIndex] = 'really';
+
+const lengthCheck = storyWords.every((word) => {
+  return word.length < 10;
+})
+console.log(lengthCheck);
+
+const longWord = storyWords.findIndex((word) => {
+  return word.length > 10;
+})
+
+console.log(storyWords[longWord]);
+
+storyWords[longWord] = 'dazzling';
+
 console.log(storyWords.join(' '));
