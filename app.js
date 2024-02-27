@@ -4,3 +4,22 @@ let storyWords = story.split(' ');
 let unnecessaryWord = 'literally';
 let misspelledWord = 'beautifull';
 let badWord = 'freaking';
+let count = 0;
+
+storyWords.forEach((word) => {
+  count++;
+})
+console.log(count);
+
+storyWords = storyWords.filter((word) => {
+  return word !== unnecessaryWord;
+})
+
+storyWords = storyWords.map((word) => {
+  if(word === misspelledWord){
+    return 'beautiful';
+  }
+  return word;
+})
+
+console.log(storyWords.join(' '));
